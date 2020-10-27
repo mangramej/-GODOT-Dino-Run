@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jump" type="Button" parent="HBoxContainer"]
+margin_right = 600.0
+margin_bottom = 300.0
+size_flags_horizontal = 3
+size_flags_vertical = 3

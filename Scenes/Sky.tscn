@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/Sky.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Sky.gd" type="Script" id=2]
+
+[node name="Sky" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 2
+script = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 600, 0 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 1 )
+centered = false
+vframes = 2
+frame = 1
+script = ExtResource( 2 )

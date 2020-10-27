@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/resources/ground.tres" type="TileSet" id=1]
+[ext_resource path="res://Scripts/Floor.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
+
+[node name="HighGrassFloor" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -88.0 ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, 0, 0, 65536, 1, 0, 65537, 2, 0, 65537, 3, 0, 65537, 4, 0, 65537, 5, 0, 65538, 65536, 2, 65536, 65537, 2, 65537, 65538, 2, 1, 65539, 2, 1, 65540, 2, 65538, 65541, 2, 65539 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 96, 28 )
+scale = Vector2( 9.6, 3.6 )
+
+[node name="Coin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 56, -32 )
+
+[node name="Coin2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 136, -32 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
