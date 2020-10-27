@@ -14,6 +14,5 @@ func _on_Coin_body_entered(body):
 		sound.play()
 		hide()
 
-
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
